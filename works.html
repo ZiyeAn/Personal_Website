@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128|VT323" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="works.css">
+</head>
+<body>
+    <nav class="menu-nav">
+        <a href="index.html" class="home-link">Home</a>
+        <ul id="tag-filter">
+            <li><button class="filter-tag" data-tag="all">View All</button></li>
+            <!-- Tags will be dynamically inserted here -->
+        </ul>
+    </nav>
+
+    <div class="gallery-container">
+        <div class="gallery-track">
+            <!-- Project cards will be inserted here by JavaScript -->
+        </div>
+
+        <div class="gallery-nav">
+            <button class="nav-button prev" aria-label="Previous project"></button>
+            <button class="nav-button next" aria-label="Next project"></button>
+        </div>
+
+        <div class="scroll-progress">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="works.js"></script>
+</body>
+</html>

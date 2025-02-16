@@ -1,0 +1,270 @@
+{
+  "projects": [
+    {
+      "title": "Chester Choiceworth",
+      "thumbnail": "assets/chester/Chester Choiceworth.png",
+      "intro": "\"You don't choose your lifestyle, Data does.\"",
+      "tags": ["Physical Computing", "website"],
+      "id": "/works/chester_choiceworth.html",
+      "details": {
+        "description": "An interactive installation that visualizes how daily choices shape our lifestyle through data collection and artistic representation.",
+        "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Node.js"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://ziyean.github.io/-3-MapCeipt/",
+        "video": [
+          "../assets/chester/ccVideo.mp4"
+        ],
+        "images": [
+          "../assets/chester/CC1.png",
+          "../assets/chester/CC2.png",
+          "../assets/chester/image3.jpg"
+        ],
+        "process": {
+          "inspiration": [
+            "Studied behavioral psychology and decision-making patterns",
+            "Analyzed existing lifestyle tracking applications",
+            "Conducted user interviews about daily decision-making processes"
+          ],
+          "development": [
+            "Built Arduino sensors for data collection",
+            "Developed data visualization algorithms",
+            "Created interactive web interface",
+            "Implemented real-time data processing"
+          ],
+          "images": [
+            "Conducted user testing sessions",
+            "Refined interface based on feedback",
+            "Optimized performance and reliability"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Funguide",
+      "thumbnail": "assets/funguide/Funguide.png",
+      "intro": "A web app that uses AI to identify mushroom species from images and generates unique recipes. Built with Gemini API and React.",
+      "tags": ["website"],
+      "id":"/works/funguide.html",
+      "details": {
+        "description": "<b>Problems:</b> <br> * lack of instant mushroom identifier app (iNaturist, Plantiary)<br>* Combine recipe function together (where my interest in mushroom comes from)<br>* can’t get instant knowledge while out foraging it. <br><b>Idea:</b><br>* image recognition<br>* recipe generator.",
+        "techStack": ["Arduino", "JavaScript", "HTML/CSS","Node.js"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://funguide.onrender.com/",
+        "video": [
+          "../assets/funguide/m1.mp4"
+        ],
+        "images": [
+          "../assets/funguide/f1.png",
+          "../assets/funguide/f2.png",
+          "../assets/funguide/f3.png",
+          "../assets/funguide/f4.png"
+        ],
+        "process": {
+          "inspiration": [
+            "Studied behavioral psychology and decision-making patterns",
+            "Analyzed existing lifestyle tracking applications",
+            "Conducted user interviews about daily decision-making processes"
+          ],
+          "development": [
+            "Built Arduino sensors for data collection",
+            "Developed data visualization algorithms",
+            "Created interactive web interface",
+            "Implemented real-time data processing"
+          ],
+          "images": [
+            "Conducted user testing sessions",
+            "Refined interface based on feedback",
+            "Optimized performance and reliability"
+          ]
+        }
+      }
+    },
+    {
+      "title": "An Apple",
+      "thumbnail": "assets/apple/different perspective.png",
+      "intro": "How can you see an apple from different perspectives?",
+      "tags": ["website"],
+      "id":"/works/apple.html",
+      "details": {
+        "description": "How to view an apple from different perspective?  To me, apple is a fruit I think is too normal to ear but my mom always push me to eat. She never stop bragging how good it is to eat apples, so I wanted to figure out how poeple from the world view this normal fruit. I also include how I view it at the final section cuz I want also a private perspective of apples.",
+        "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Python"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://ziyean.github.io/-2-Different-Perspective/",
+        "video": [
+          "../assets/apple/apple1.mp4"
+        ],
+        "images": [
+          "../assets/apple/a1.png",
+          "../assets/apple/a2.png",
+          "../assets/apple/a3.png"
+        ],
+        "process": {
+          "inspiration": [
+            "Studied behavioral psychology and decision-making patterns",
+            "Analyzed existing lifestyle tracking applications",
+            "Conducted user interviews about daily decision-making processes"
+          ],
+          "development": [
+            "Built Arduino sensors for data collection",
+            "Developed data visualization algorithms",
+            "Created interactive web interface",
+            "Implemented real-time data processing"
+          ],
+          "images": [
+            "Conducted user testing sessions",
+            "Refined interface based on feedback",
+            "Optimized performance and reliability"
+          ]
+        }
+      }
+    },
+    {
+      "title": "What to cook today?",
+      "thumbnail": "assets/what_to_cook/wtc_hero_img.png",
+      "intro": "A simple cookbook for kids",
+      "tags": ["website"],
+      "id":"/works/what_to_cook_today.html",
+      "details": {
+        "description": "A simple cook book for kids. Allos kids to choose the ingredients and make their own meal.",
+        "techStack": ["JavaScript", "HTML/CSS","Local Storage"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://ziyean.github.io/-3-Community-Tool-or-Quiz/index.html",
+        "images": [
+          "../assets/what_to_cook/wtc1.png",
+          "../assets/what_to_cook/wtc2.png",
+          "../assets/what_to_cook/wtc3.png"
+        ],
+        "process": {
+          "inspiration": [
+            "Studied behavioral psychology and decision-making patterns",
+            "Analyzed existing lifestyle tracking applications",
+            "Conducted user interviews about daily decision-making processes"
+          ],
+          "development": [
+            "Built Arduino sensors for data collection",
+            "Developed data visualization algorithms",
+            "Created interactive web interface",
+            "Implemented real-time data processing"
+          ],
+          "images": [
+            "Conducted user testing sessions",
+            "Refined interface based on feedback",
+            "Optimized performance and reliability"
+          ]
+        }
+      }
+    },
+    {
+      "title": "What to drink today?",
+      "thumbnail": "assets/what_to_drink/wtd1.png",
+      "intro": "Decide what to drink though a digital chinese diviation",
+      "tags": ["website"],
+      "id":"/works/what-to-drink-today.html",
+      "details": {
+        "description": "An interactive installation that visualizes how daily choices shape our lifestyle through data collection and artistic representation.",
+        "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Python"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://ziyean.github.io/-4-Digital-Divination/index.html",
+        "video": [
+          "../assets/what_to_drink/wtd.mp4"
+        ],
+        "images": [
+          "../assets/what_to_drink/wtd2.png"
+        ],
+        "process": {
+          "inspiration": [
+            "Studied behavioral psychology and decision-making patterns",
+            "Analyzed existing lifestyle tracking applications",
+            "Conducted user interviews about daily decision-making processes"
+          ],
+          "development": [
+            "Built Arduino sensors for data collection",
+            "Developed data visualization algorithms",
+            "Created interactive web interface",
+            "Implemented real-time data processing"
+          ],
+          "images": [
+            "Conducted user testing sessions",
+            "Refined interface based on feedback",
+            "Optimized performance and reliability"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Marriage Premium",
+      "thumbnail": "../assets/marriage_premium/mp_tn.png",
+      "intro": "Decide what to drink though a digital chinese diviation",
+      "tags": ["p5.js", "Physical Computing"],
+      "id":"/works/marriage_premium.html",
+      "details": {
+        "description": "P5.js is used to create a game showing the problem ‘marriage Premium’ based on my parent’s story, users are able to make choice and decide the life of this couple. And the scale controlled by arduino is gonna tilt by the servo motor to show the unequal result. I wanted to show that even though there are choices given and seems like that people could be able to fight against this inequality, the balance is still telling you that inequality still exists regardless the personal effort since unless the idea and policy changed, such discrimination and difficulties would never end.",
+        "techStack": ["p5.js", "arduino"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://editor.p5js.org/ZiyeAn/full/D6U7c7mQB",
+        "video": [
+          "../assets/marriage_premium/mp_video.mp4"
+        ],
+        "images": [
+          "../assets/marriage_premium/mp1.jpg",
+          "../assets/marriage_premium/mp2.jpeg",
+          "../assets/marriage_premium/mp3.jpeg"
+        ],
+        "process": {
+          "inspiration": [
+            "Studied behavioral psychology and decision-making patterns",
+            "Analyzed existing lifestyle tracking applications",
+            "Conducted user interviews about daily decision-making processes"
+          ],
+          "development": [
+            "Built Arduino sensors for data collection",
+            "Developed data visualization algorithms",
+            "Created interactive web interface",
+            "Implemented real-time data processing"
+          ],
+          "images": [
+            "Conducted user testing sessions",
+            "Refined interface based on feedback",
+            "Optimized performance and reliability"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Autobiographical Game",
+      "thumbnail": "assets/bio_game/g1.png",
+      "intro": "Decide what to drink though a digital chinese diviation",
+      "tags": ["p5.js"],
+      "id":"/works/autobiographical_game.html",
+      "details": {
+        "description": "An interactive installation that visualizes how daily choices shape our lifestyle through data collection and artistic representation.",
+        "techStack": ["p5.js"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",
+        "images": [
+          "../assets/bio_game/g1.png",
+          "../assets/bio_game/CC2.png",
+          "../assets/bio_game/image3.jpg"
+        ],
+        "process": {
+          "inspiration": [
+            "Studied behavioral psychology and decision-making patterns",
+            "Analyzed existing lifestyle tracking applications",
+            "Conducted user interviews about daily decision-making processes"
+          ],
+          "development": [
+            "Built Arduino sensors for data collection",
+            "Developed data visualization algorithms",
+            "Created interactive web interface",
+            "Implemented real-time data processing"
+          ],
+          "images": [
+            "Conducted user testing sessions",
+            "Refined interface based on feedback",
+            "Optimized performance and reliability"
+          ]
+        }
+      }
+    }
+  ]
+}

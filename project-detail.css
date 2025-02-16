@@ -1,0 +1,204 @@
+@font-face {  
+    font-family: 'huiwen';  
+    src: url('assets/huwenfangsong.001.ttf') format('truetype');
+}  
+
+.project-container {
+    background-color:"#FDF9E4";
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.images-section {
+    position: relative;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f9f6f1;
+}
+
+.images-section img {
+    width: 90%;
+    display: block;
+    margin:auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+}
+
+.info-section {
+    font-family: 'huiwen';
+    padding: 2rem;
+    position: relative;
+    background: "#FDF9E4";
+    color: black;
+}
+
+.process-tab {
+    position: fixed;
+    left: 0;
+    bottom: 2rem;
+    transform: none;
+    background: #a70712;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 200;
+}
+
+.process-tab.active {
+    left: 66.67%; /* Match the width of process content */
+    transition: all 0.5s;
+    transform-origin: left bottom;
+}
+
+.process-content {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 66.67%;
+    height: calc(100vh - 60px);
+    background: #a70712;
+    color: white;
+    padding: 2rem;
+    transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0s linear 0.5s;
+    overflow-y: auto;
+    z-index: 150;
+}
+
+.process-content.active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.5s ease;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.tech-item {
+    background: #f0f0f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: white;
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background: #333;
+}
+
+.back-button {
+    position: relative;
+    top: unset;
+    left: unset;
+    background: transparent;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.back-button:hover {
+    color: #a70712;
+}
+
+.process-tab:hover {
+    background: #c50815;
+    padding-right: 2rem;
+}
+
+/* Add header styles */
+.project-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 100;
+}
+
+.project-header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.project-header a {
+    color: white;
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.project-header a:hover {
+    color: #a70712;
+}
+
+/* Optional: Add some styling to the process content */
+.process-content h2 {
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.process-content ol {
+    padding-left: 1.5rem;
+}
+
+.process-content li {
+    margin-bottom: 1.5rem;
+}
+
+.process-content ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.process-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+.video-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+} 

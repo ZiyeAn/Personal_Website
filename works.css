@@ -1,0 +1,294 @@
+.body {
+    background-color: #000000;
+}
+.gallery-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 2rem;
+    padding: 0 20%;
+    transform: translateX(0);
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    width: max-content;
+}
+
+.project-card {
+    min-width: 300px;
+    max-width: 300px;
+    height: 600px;
+    background: white;
+    border-radius: 0;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    clip-path: polygon(
+        0% 0%, 2% 1%, 4% 0%, 6% 1%, 8% 0%, 10% 1%, 12% 0%, 14% 1%, 
+        16% 0%, 18% 1%, 20% 0%, 22% 1%, 24% 0%, 26% 1%, 28% 0%, 30% 1%, 
+        32% 0%, 34% 1%, 36% 0%, 38% 1%, 40% 0%, 42% 1%, 44% 0%, 46% 1%, 
+        48% 0%, 50% 1%, 52% 0%, 54% 1%, 56% 0%, 58% 1%, 60% 0%, 62% 1%, 
+        64% 0%, 66% 1%, 68% 0%, 70% 1%, 72% 0%, 74% 1%, 76% 0%, 78% 1%, 
+        80% 0%, 82% 1%, 84% 0%, 86% 1%, 88% 0%, 90% 1%, 92% 0%, 94% 1%, 
+        96% 0%, 98% 1%, 100% 0%,
+        100% 100%,
+        98% 99%, 96% 100%, 94% 99%, 92% 100%, 90% 99%, 88% 100%, 86% 99%, 
+        84% 100%, 82% 99%, 80% 100%, 78% 99%, 76% 100%, 74% 99%, 72% 100%, 
+        70% 99%, 68% 100%, 66% 99%, 64% 100%, 62% 99%, 60% 100%, 58% 99%, 
+        56% 100%, 54% 99%, 52% 100%, 50% 99%, 48% 100%, 46% 99%, 44% 100%, 
+        42% 99%, 40% 100%, 38% 99%, 36% 100%, 34% 99%, 32% 100%, 30% 99%, 
+        28% 100%, 26% 99%, 24% 100%, 22% 99%, 20% 100%, 18% 99%, 16% 100%, 
+        14% 99%, 12% 100%, 10% 99%, 8% 100%, 6% 99%, 4% 100%, 2% 99%, 0% 100%
+    );
+}
+
+.project-card.active {
+    transform: scale(1.1);
+}
+
+.project-card:not(.active) {
+    filter: blur(2px);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.project-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.project-info {
+    padding: 1rem;
+    text-align: left;
+}
+
+.project-title {
+    text-align: center;
+    font-family: "VT323", monospace;
+    font-size: 1.7rem;
+    color: #1f1f1f;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+hr.dashed {
+    border-top: 2px dashed #252525;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    pointer-events: none;
+}
+
+.nav-button {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+.nav-button.prev::before {
+    content: "←";
+}
+
+.nav-button.next::before {
+    content: "→";
+}
+
+/* Polaroid effect */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: white;
+    z-index: -1;
+    border-radius: 2px;
+    transform: rotate(-1deg);
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #000;
+    width: 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Remove or comment out the button styles */
+button {
+    font-size: 18px;
+    color: #313131;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+button:focus,
+button:hover {
+    color: #8e8e8e;
+}
+
+button:focus:after,
+button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+/* Prevent body scrolling when viewing gallery */
+body {
+    overflow: hidden;
+}
+
+.grit {
+    -webkit-mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+}
+
+.menu-nav .home-link {
+    color: white;
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.menu-nav .home-link:hover {
+    color: #a70712;
+}
+
+#tag-filter {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#tag-filter li {
+    display: inline;
+}
+
+#tag-filter {
+    margin-left: auto; /* Align tags to the right */
+}
+
+.filter-tag {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.filter-tag:focus,
+.filter-tag:hover {
+    color: #fff;
+}
+
+.filter-tag:focus:after,
+.filter-tag:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.filter-tag:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+} 
