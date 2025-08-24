@@ -8,14 +8,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128|VT323" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
     <link rel="stylesheet" href="works.css">
 </head>
 <body>
     <nav class="menu-nav">
         <a href="index.html" class="home-link">Home</a>
         <ul id="tag-filter">
-            <li><button class="filter-tag" data-tag="all">View All</button></li>
+            <li>
+                <label>
+                    <input type="radio" name="tag" value="all" class="filter-tag" checked>
+                    View All
+                </label>
+            </li>
             <!-- Tags will be dynamically inserted here -->
         </ul>
     </nav>

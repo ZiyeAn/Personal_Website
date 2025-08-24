@@ -2,22 +2,24 @@
   "projects": [
     {
       "title": "Chester Choiceworth",
+      "time": "2024",
       "thumbnail": "assets/chester/Chester Choiceworth.png",
       "intro": "\"You don't choose your lifestyle, Data does.\"",
       "tags": ["Physical Computing", "website"],
       "id": "/works/chester_choiceworth.html",
       "details": {
-        "description": "An interactive installation that visualizes how daily choices shape our lifestyle through data collection and artistic representation.",
+        "description": "Chester Choiceworth is an interactive installation that turns your spending habits into a visual and playful experience. <br><br>By uploading your monthly transaction record, the system creates a digital receipt summarizing your expenses and maps out where you’ve spent your money. At the same time, a receipt printer prints out exaggerated ads for luxury or budget items based on your spending level, highlighting how consumer targeting shapes our lifestyle.",
         "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Node.js"],
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://ziyean.github.io/-3-MapCeipt/",
         "video": [
-          "../assets/chester/ccVideo.mp4"
+          "../assets/chester/CC.mp4"
         ],
         "images": [
+          "../assets/chester/CC3.JPG",
           "../assets/chester/CC1.png",
           "../assets/chester/CC2.png",
-          "../assets/chester/image3.jpg"
+          "../assets/chester/CC4.JPG"
         ],
         "process": {
           "inspiration": [
@@ -41,13 +43,14 @@
     },
     {
       "title": "Funguide",
+      "time": "2024",
       "thumbnail": "assets/funguide/Funguide.png",
       "intro": "A web app that uses AI to identify mushroom species from images and generates unique recipes. Built with Gemini API and React.",
       "tags": ["website"],
       "id":"/works/funguide.html",
       "details": {
-        "description": "<b>Problems:</b> <br> * lack of instant mushroom identifier app (iNaturist, Plantiary)<br>* Combine recipe function together (where my interest in mushroom comes from)<br>* can’t get instant knowledge while out foraging it. <br><b>Idea:</b><br>* image recognition<br>* recipe generator.",
-        "techStack": ["Arduino", "JavaScript", "HTML/CSS","Node.js"],
+        "description": "Funguide is a mushroom recognition and recipe generator. Simply upload a photo of a mushroom, and the system will identify it, providing basic information along with a recipe featuring that mushroom.",
+        "techStack": ["JavaScript", "HTML/CSS","Node.js","Gemini API"],
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://funguide.onrender.com/",
         "video": [
@@ -61,9 +64,10 @@
         ],
         "process": {
           "inspiration": [
-            "Studied behavioral psychology and decision-making patterns",
-            "Analyzed existing lifestyle tracking applications",
-            "Conducted user interviews about daily decision-making processes"
+            "<b>Problems:</b>",
+            "* lack of instant mushroom identifier app (iNaturist, Plantiary)<br>* Combine recipe function together (where my interest in mushroom comes from)<br>* can’t get instant knowledge while out foraging it.",
+            "<b>Idea:</b>",
+            "* image recognition<br>* recipe generator."
           ],
           "development": [
             "Built Arduino sensors for data collection",
@@ -81,6 +85,7 @@
     },
     {
       "title": "An Apple",
+      "time": "2024",
       "thumbnail": "assets/apple/different perspective.png",
       "intro": "How can you see an apple from different perspectives?",
       "tags": ["website"],
@@ -120,6 +125,7 @@
     },
     {
       "title": "What to cook today?",
+      "time": "2024",
       "thumbnail": "assets/what_to_cook/wtc_hero_img.png",
       "intro": "A simple cookbook for kids",
       "tags": ["website"],
@@ -156,6 +162,7 @@
     },
     {
       "title": "What to drink today?",
+      "time": "2024",
       "thumbnail": "assets/what_to_drink/wtd1.png",
       "intro": "Decide what to drink though a digital chinese diviation",
       "tags": ["website"],
@@ -193,6 +200,7 @@
     },
     {
       "title": "Marriage Premium",
+      "time": "2024",
       "thumbnail": "../assets/marriage_premium/mp_tn.png",
       "intro": "Decide what to drink though a digital chinese diviation",
       "tags": ["p5.js", "Physical Computing"],
@@ -232,6 +240,7 @@
     },
     {
       "title": "Autobiographical Game",
+      "time": "2024",
       "thumbnail": "assets/bio_game/g1.png",
       "intro": "Decide what to drink though a digital chinese diviation",
       "tags": ["p5.js"],

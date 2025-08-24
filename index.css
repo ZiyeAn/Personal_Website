@@ -1,209 +1,149 @@
 /* Base styles and CSS reset */
+@font-face {  
+    font-family: 'huiwen';  
+    src: url('assets/huwenfangsong.001.ttf') format('truetype');
+}  
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
 body {
-    font-family:  "VT323", monospace;
+    font-family: 'huiwen';
     background-color: #f9f6f1;
-    color: #000;
+    color: #353534;
     line-height: 1.6;
     cursor: url('cursor.png'), auto;
-}
-
-/* Header and Logo */
-header {
-    height: 100vh; /* Full viewport height */
-    padding: 0;
-    text-align: center;
-    background-color: #000000;
+    height: 200vh; /* Makes page scrollable */
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.logo {
+/* h1{
+    text-align: center;
+    font-size: 9em;
+    color: #353534;
+} */
+
+h3{
+    font-size: 2vw;
+    color: #353534;
+}
+.title img{
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo img {
-    max-width: 50%;
-    max-height: 70vh;
     height: auto;
-    object-fit: contain;
+}
+.subtitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2vw;
+    color: #333; /* Adjust color as needed */
 }
 
-/* Navigation */
-.menu-nav {
-    position: sticky;
-    top: 0;
+.hands {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.left-hand img {
+    width: 30vw; /* Smaller size */
+    left: 0; /* Align to the bottom left */
+    bottom: 0;
+}
+
+.right-hand img{
+    width: 30vw; /* Smaller size */
+    right: 0; /* Align to the bottom right */
+    bottom: 0;
+}
+
+.menu-container {
+    position: absolute;
+    top: 53%;
+    width: 40vw; 
+    height: 5px; /* Start as a thin horizontal line */
+    background-color: rgb(0, 0, 0);
+    border: #000;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    text-align: center;
     z-index: 100;
-    background-color: #f9f6f1;
-    padding: 1rem 0;
-    border-bottom: 2px solid #2c1810;
 }
 
-.menu-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 2rem;
-}
-
-.menu-nav a {
-    text-decoration: none;
-    color: #2c1810;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.menu-nav a:hover {
-    color: #8b4513;
-}
-
-/* Main Content */
 .menu-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+    opacity: 0;
+}
+.menu-content img{
+    width: 100%;
+    height: auto;
 }
 
-.menu-section {
-    margin-bottom: 4rem;
-    padding: 2rem;
-    background-color: #fff;
-    border: 1px solid #d4c9c4;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #2c1810;
-    border-bottom: 2px solid #d4c9c4;
-    padding-bottom: 0.5rem;
-}
-
-.menu-description {
-    text-align: center;
-    font-style: italic;
-    color: #666;
-    margin-bottom: 2rem;
-}
-
-/* Menu Items */
-.menu-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.menu-item {
-    padding: 1.5rem;
-    border: 1px solid #d4c9c4;
-    transition: transform 0.3s ease;
-}
-
-.menu-item:hover {
-    transform: translateY(-5px);
-}
-
-.menu-item h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.description {
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.view-more {
-    display: inline-block;
-    color: #8b4513;
-    cursor: pointer;
-    font-style: italic;
-}
-
-/* Footer */
-footer {
-    background-color: #2c1810;
-    color: #f9f6f1;
-    padding: 3rem 2rem;
-    margin-top: 4rem;
-}
-
-.contact-info {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.social-links {
+.catalog-container {
+    position: absolute;
+    top: 140%; /* Position it right below the menu */
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #353534; /* Fill with black */
+    z-index: 50; /* Ensure it's below the menu */
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
 }
 
-.social-link {
-    color: #f9f6f1;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border: 1px solid #f9f6f1;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    background-color: #f9f6f1;
-    color: #2c1810;
-}
-
-.resume-download {
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between grid items */
+    width: 80%; /* Width of the grid */
+    max-width: 1200px; /* Maximum width of the grid */
     text-align: center;
+    color: white;
 }
 
-.download-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #8b4513;
-    color: #f9f6f1;
+.grid-item { 
+    border: ;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.grid-item p {
+    font-size: 1em;
+    color: #ddd;
+}
+
+a{
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    color: #ddd;
 }
 
-.download-button:hover {
-    background-color: #a65d1e;
+a:hover{
+    color: #f9f6f1;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .menu-nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .menu-section {
-        padding: 1rem;
-    }
-
-    .menu-items {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-section h2 {
-        font-size: 2rem;
-    }
-} 

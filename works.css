@@ -1,6 +1,164 @@
-.body {
-    background-color: #000000;
+@font-face {  
+    font-family: 'huiwen';  
+    src: url('assets/huwenfangsong.001.ttf') format('truetype');
+}  
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
 }
+
+body {
+    font-family: 'huiwen';
+    background-color: #252525;
+    color: #f9f6f1;
+    line-height: 1.6;
+    cursor: url('cursor.png'), auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'huiwen';
+    font-size: 5vw;
+    text-align: center;
+    color: #f9f6f1;
+}
+
+h3 {
+    font-size: 2vw;
+    color: #f9f6f1;
+}
+
+.subtitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2vw;
+    color: #f9f6f1;
+}
+
+.menu-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #f9f6f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu-nav a {
+    color: #f9f6f1;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.menu-nav a:hover {
+    color: #a70712;
+}
+
+.menu-nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-nav .nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .menu-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .menu-nav a {
+        margin: 0.5rem 0;
+    }
+}
+
+#tag-filter {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#tag-filter li {
+    display: inline;
+}
+
+#tag-filter {
+    margin-left: auto;
+}
+
+#tag-filter label {
+    font-size: 18px;
+    color: #252525;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    display: inline-block;
+}
+
+#tag-filter input[type="radio"] {
+    display: none;
+}
+
+#tag-filter label:focus,
+#tag-filter label:hover {
+    color: #fff;
+}
+
+#tag-filter label:focus:after,
+#tag-filter label:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+#tag-filter label:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
 .gallery-container {
     height: 100vh;
     width: 100%;
@@ -22,8 +180,10 @@
 .project-card {
     min-width: 300px;
     max-width: 300px;
-    height: 600px;
-    background: white;
+    height: 570px;
+    background-image: url('assets/paperTexture.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 0;
     padding: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -164,7 +324,7 @@ hr.dashed {
 /* Remove or comment out the button styles */
 button {
     font-size: 18px;
-    color: #313131;
+    color: #f9f6f1;
     font-family: inherit;
     font-weight: 800;
     cursor: pointer;
@@ -214,81 +374,4 @@ body {
     mask-size: cover;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-}
-
-.menu-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #333;
-    color: white;
-}
-
-.menu-nav .home-link {
-    color: white;
-    text-decoration: none;
-    font-family: 'VT323', monospace;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.menu-nav .home-link:hover {
-    color: #a70712;
-}
-
-#tag-filter {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#tag-filter li {
-    display: inline;
-}
-
-#tag-filter {
-    margin-left: auto; /* Align tags to the right */
-}
-
-.filter-tag {
-    font-size: 18px;
-    color: #e1e1e1;
-    font-family: inherit;
-    font-weight: 800;
-    cursor: pointer;
-    position: relative;
-    border: none;
-    background: none;
-    text-transform: uppercase;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-}
-
-.filter-tag:focus,
-.filter-tag:hover {
-    color: #fff;
-}
-
-.filter-tag:focus:after,
-.filter-tag:hover:after {
-    width: 100%;
-    left: 0%;
-}
-
-.filter-tag:after {
-    content: "";
-    pointer-events: none;
-    bottom: -2px;
-    left: 50%;
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: #fff;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
 } 

@@ -5,36 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Table for One | Ziye An</title>
     <link rel="stylesheet" href="index.css">
-    <script defer src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <h1>Ziye An</h1>
-    <div class="container">
-        <!-- Hands bringing in the menu -->
-        <div class="hands left-hand">
-            <img src="assets/index/left_hand.png" alt="Left Hand">
-        </div>
-        <div class="hands right-hand">
-            <img src="assets/index/right_hand.png" alt="Right Hand">
-        </div>
-        
-        <!-- The menu that introduces your work -->
-        <div class="menu-container">
-            <div class="menu">
-                <h1 class="fade-in">A Table for One</h1>
-                <p class="fade-in">Curated by Ziye An</p>
-                <p class="fade-in">Tonight’s Special: A selection of experiments in code and design.</p>
-            </div>
+    <div class="title">
+        <img src="assets/index/title.png" alt="Title">
+        <h3 class="subtitle" data-text='"A Table for One?"'></h3>
+    </div>
+    
+    <div class="menu-container">
+        <div class="menu-content">
+            <img src="assets/index/name.png" alt="Menu">
         </div>
     </div>
 
+    <div class="hands">
+        <div class="left-hand">
+            <img src="assets/index/left_hand.png" alt="Left Hand">
+        </div>
+        <div class="right-hand">
+            <img src="assets/index/right_hand.png" alt="Right Hand">
+        </div>
+    </div>
+
+    <div class="catalog-container">
+        <div class="grid">
+            <div class="grid-item">
+                <h2>About Me</h2>
+                <p>Starter/Appetizer</p>
+                <img src="assets/index/about_me.png" alt="About Me">
+                <p>I am a student in Design and Technology at Parsons School of Design. I created work with code, paint brush and arduino.</p>
+            </div>
+
+            <div class="grid-item">
+                <h2>Works</h2>
+                <div id="works-list">
+                    <!-- Works will be loaded here from works.json -->
+                </div>
+                
+            </div>
+            <div class="grid-item">
+                <h2>Experiments/Labs</h2>
+                <p>Side Dish</p>
+            </div>
+        </div>
+    </div>
+<!-- 
+        <div class="menu">
+
+            <nav class="sticky-menu">
+
+            </nav>
+        </div> -->
+
+        <!-- <div class="menu">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my works below</p>
+        </div>
+        <div class="top-menu-bar">
+            <h1>My Works</h1>
+        </div> -->
+    </div>
+    <div class="plate-section">
+        <div class="select-work">
+            <p>Chef's Recommendation</p>
+        </div>
+        <div class="plate">
+            <div class="works-display">
+                            <!-- Selected works will be displayed here -->
+            </div>
+        </div>
+        <img src="assets/fork.png" alt="Fork" class="fork">
+        <img src="assets/knife.png" alt="Knife" class="knife">
+    </div>
+    
+    
+    
+    
     <!-- Sticky menu bar that appears after scrolling -->
-    <nav class="sticky-menu hidden">
+    <!-- <nav class="sticky-menu hidden">
         <h2>Ziye An's Portfolio</h2>
-    </nav>
+    </nav> -->
 
     <!-- Plate section with works -->
-    <div class="plate-section">
+    <!-- <div class="plate-section">
         <div class="plate scale-in"></div>
         <div class="fork fly-in-left"></div>
         <div class="knife fly-in-right"></div>
@@ -42,6 +99,6 @@
             <h2 id="work-title">Work Title</h2>
             <p id="work-description">Description of the selected work.</p>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

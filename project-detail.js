@@ -39,6 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.alt = project.title;
                 imagesSection.appendChild(img);
             });
+
+            // gsap.from(".images-section", { 
+            //     opacity: 0, // Start fully transparent
+            //     y: 100, // Start 100px below its original position
+            //     duration: 1.2, // Animation duration
+            //     ease: "power3.out" // Smooth easing
+            // });
             
             // Load project info
             const infoSection = document.querySelector('.info-section');
