@@ -2,121 +2,22 @@
     font-family: 'huiwen';  
     src: url('assets/huwenfangsong.001.ttf') format('truetype');
 }  
-
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: 'Arial', sans-serif;
+h1{
+    font-family: 'huiwen';
 }
-
-body {
+p{
+    font-family: 'huiwen';
+}
+a{
+    font-family: 'huiwen';
+}
+.body {
     font-family: 'huiwen';
     background-color: #252525;
-    color: #f9f6f1;
-    line-height: 1.6;
-    cursor: url('cursor.png'), auto;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
-
-h1 {
-    font-family: 'huiwen';
-    font-size: 5vw;
-    text-align: center;
-    color: #f9f6f1;
-}
-
-h3 {
-    font-size: 2vw;
-    color: #f9f6f1;
-}
-
-.subtitle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 2vw;
-    color: #f9f6f1;
-}
-
-.menu-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: #f9f6f1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.menu-nav a {
-    color: #f9f6f1;
-    text-decoration: none;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.2rem;
-    margin: 0 1rem;
-    transition: color 0.3s ease;
-}
-
-.menu-nav a:hover {
-    color: #a70712;
-}
-
-.menu-nav .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.menu-nav .nav-links {
-    display: flex;
-    gap: 1rem;
-}
-
-@media (max-width: 768px) {
-    .menu-nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu-nav .nav-links {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .menu-nav a {
-        margin: 0.5rem 0;
-    }
-}
-
-#tag-filter {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#tag-filter li {
-    display: inline;
-}
-
-#tag-filter {
-    margin-left: auto;
-}
-
-#tag-filter label {
+button {
     font-size: 18px;
-    color: #252525;
+    color: #757575;
     font-family: inherit;
     font-weight: 800;
     cursor: pointer;
@@ -127,25 +28,20 @@ h3 {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: color;
-    display: inline-block;
 }
 
-#tag-filter input[type="radio"] {
-    display: none;
+button:focus,
+button:hover {
+    color: #870000;
 }
 
-#tag-filter label:focus,
-#tag-filter label:hover {
-    color: #fff;
-}
-
-#tag-filter label:focus:after,
-#tag-filter label:hover:after {
+button:focus:after,
+button:hover:after {
     width: 100%;
     left: 0%;
 }
 
-#tag-filter label:after {
+button:after {
     content: "";
     pointer-events: none;
     bottom: -2px;
@@ -158,7 +54,6 @@ h3 {
     transition-duration: 400ms;
     transition-property: width, left;
 }
-
 .gallery-container {
     height: 100vh;
     width: 100%;
@@ -180,10 +75,8 @@ h3 {
 .project-card {
     min-width: 300px;
     max-width: 300px;
-    height: 570px;
-    background-image: url('assets/paperTexture.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    height: 600px;
+    background: white;
     border-radius: 0;
     padding: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -260,6 +153,7 @@ hr.dashed {
     pointer-events: none;
 }
 
+
 .nav-button {
     background: rgba(0, 0, 0, 0.8);
     color: white;
@@ -321,10 +215,89 @@ hr.dashed {
     transition: width 0.3s ease;
 }
 
-/* Remove or comment out the button styles */
-button {
+
+.grit {
+    -webkit-mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.menu-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu-nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.menu-nav a:hover {
+    color: #a70712;
+}
+
+.menu-nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-nav .nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .menu-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .menu-nav a {
+        margin: 0.5rem 0;
+    }
+}
+
+#tag-filter {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#tag-filter li {
+    display: inline;
+}
+
+#tag-filter {
+    margin-left: auto; /* Align tags to the right */
+}
+
+#tag-filter label {
     font-size: 18px;
-    color: #f9f6f1;
+    color: #b3b3b3;
     font-family: inherit;
     font-weight: 800;
     cursor: pointer;
@@ -335,20 +308,25 @@ button {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: color;
+    display: inline-block;
 }
 
-button:focus,
-button:hover {
-    color: #8e8e8e;
+#tag-filter input[type="radio"] {
+    display: none; /* Hide the radio button */
 }
 
-button:focus:after,
-button:hover:after {
+#tag-filter label:focus,
+#tag-filter label:hover {
+    color: #fff;
+}
+
+#tag-filter label:focus:after,
+#tag-filter label:hover:after {
     width: 100%;
     left: 0%;
 }
 
-button:after {
+#tag-filter label:after {
     content: "";
     pointer-events: none;
     bottom: -2px;
@@ -360,18 +338,4 @@ button:after {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
-}
-
-/* Prevent body scrolling when viewing gallery */
-body {
-    overflow: hidden;
-}
-
-.grit {
-    -webkit-mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
-    mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
 } 

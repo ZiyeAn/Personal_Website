@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const plateSection = document.querySelector('.plate-section');
     const leftHand = document.querySelector(".left-hand");
     const rightHand = document.querySelector(".right-hand");
+    const worksDisplayEl = document.getElementById("works-display");
     const tl = gsap.timeline();
     gsap.registerPlugin(ScrollTrigger);
 
@@ -65,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
             end: "top 10%",
             scrub: true,
         },
-        rotation: 30,
+        rotation: 20,
         duration: 2,
         ease: "power3.inOut",
     },0);
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
             end: "top 10%",
             scrub: true
         },
-        rotation: -30,
+        rotation: -20,
         duration: 2,
         ease: "power3.inOut",
     },0);
@@ -107,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollTrigger: {
             trigger: ".right-hand",
             start: "top 40%",
-            scrub:  true
+            scrub:  true,
         },
         opacity: 1, // Fade in text
         duration: 1
@@ -118,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
             trigger: ".catalog-container",
             start: "top center",
             end: "30% center",
+            scrub:  true,
             snap: {
                 snapTo: "start", // Snaps the container to the start of the viewport
                 duration: 0.5,   // Smooth snap duration
@@ -125,25 +127,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         },
         xPercent: -100,
-        duration: 1.5,
+        duration: 2,
         ease: "power3.inOut"
     });
 
-
-    fetch('works.json')
-    .then(response => response.json())
-    .then(data => {
-        const worksList = document.getElementById('works-list');
-        data.projects.forEach(work => {
-            const workElement = document.createElement('div');
-            workElement.className = 'work-item';
-            workElement.innerHTML = `
-                <a href="${work.id}">${work.title}</a>
-            `;
-            worksList.appendChild(workElement);
-        });
-    })
-    .catch(error => console.error('Error loading works:', error));
     
 
         // Show plate section and animate fork and knife
@@ -166,21 +153,28 @@ document.addEventListener("DOMContentLoaded", function() {
         let currentWorkIndex = 0;
 
         function updateWorkDisplay() {
-            document.getElementById("work-title").textContent = works[currentWorkIndex].title;
-            document.getElementById("work-description").textContent = works[currentWorkIndex].description;
+            if (!worksDisplayEl) return console.error("#works-display not found");
+            const work = works[currentWorkIndex];
+            worksDisplayEl.innerHTML = `
+                <h2 id="work-title">${work.title}</h2>
+                <p id="work-description">${work.description}</p>
+            `;
         }
         
         updateWorkDisplay();
         
-        fork.addEventListener("click", () => {
-            currentWorkIndex = (currentWorkIndex - 1 + works.length) % works.length;
-            updateWorkDisplay();
-        });
-        
-        knife.addEventListener("click", () => {
-            currentWorkIndex = (currentWorkIndex + 1) % works.length;
-            updateWorkDisplay();
-        });
+        if (fork) {
+            fork.addEventListener("click", () => {
+                currentWorkIndex = (currentWorkIndex - 1 + works.length) % works.length;
+                updateWorkDisplay();
+            });
+        }
+        if (knife) {
+            knife.addEventListener("click", () => {
+                currentWorkIndex = (currentWorkIndex + 1) % works.length;
+                updateWorkDisplay();
+            });
+        }
     });
 
     

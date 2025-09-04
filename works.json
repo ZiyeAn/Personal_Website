@@ -1,8 +1,90 @@
 {
   "projects": [
     {
+      "title": "Labyrinth",
+      "thumbnail": "assets/labyrinth/labyrinth_thumb.png",
+      "intro": " a two-player asymmetric hide-and-seek game set in a dark maze. One player becomes the Hider (a living person trying to escape), while the other becomes the Seeker (a ghostly entity that hunts through sound)",
+      "tags": ["Game"],
+      "id": "/works/labyrinth.html",
+      "details": {
+        "description": "Labyrinth is an asymmetric two-player game about perception. Player 1 navigates a maze using Leap Motion (Arduino-driven light input that reveals a cone of vision in-game). Player 2 cannot see the maze; instead, they track the hider through spatialized foodstep audio, inspired by echolocation. The tension comes from incomplete, unequal senses—light versus echo.",
+        "techStack": ["Unity", "C#", "Arduino", "Spatial Audio","Leap Motion"],
+        "timeline": "Mar 2025 – Apr 2025",
+        "demoLink": "#",
+        "video": [
+          "../assets/labyrinth/Labyrinth.mp4"
+        ],
+        "images": [
+          "../assets/labyrinth/Labyrinth5.jpg",
+          "../assets/labyrinth/Labyrinth6.jpg",
+          "../assets/labyrinth/Labyrinth7.jpg",
+          "../assets/labyrinth/Labyrinth8.jpg",
+          "../assets/labyrinth/Labyrinth9.jpg"
+        ],
+        "process": {
+          "inspiration": [
+            "Asymmetric multiplayer (hunter vs. hider) dynamics",
+            "Dark Echo-style echolocation aesthetics",
+            "Embodied interfaces for sensory substitution"
+          ],
+          "development": [
+            "Built Arduino ‘torch’ with adjustable brightness mapped to a Unity spotlight",
+            "Implemented spatialized audio cues and decay to suggest distance",
+            "Designed mazes balancing fairness for both roles",
+            "Ran playtests to tune loudness, reveal radius, and movement speed"
+          ],
+          "images": [
+            "Iterated on HUD minimalism to heighten tension",
+            "Refined echo cooldown and reverb tails for readability",
+            "Optimized performance for stable latency between Arduino and Unity"
+          ]
+        }
+      }
+    },
+    {
+      "title": "Spinphony",
+      "thumbnail": "assets/spinphony/spinphony-5.jpg",
+      "intro": "A record-player-inspired platformer where a lost note (Do) spins through musical puzzles to reunite with its scale.",
+      "tags": ["Game"],
+      "id": "/works/spinphony.html",
+      "details": {
+        "description": "Spinphony is a playful platformer controlled by a custom record-like controller. Rotating the physical ‘record’ moves the character through a world of rhythmic platforms, while two arcade buttons trigger jumps and interactions. Built in Unity with an Arduino-based rotary encoder + buttons, the game explores embodied interaction—turning music and motion into level design.",
+        "techStack": ["Unity", "C#", "Arduino", "Serial (USB)", "Illustrator"],
+        "timeline": "Jan 2025 – Mar 2025",
+        "demoLink": "#",
+        "video": [
+          "../assets/spinphony/Spinphony.mov"
+        ],
+        "images": [
+          "../assets/spinphony/spinphony-2.jpg",
+          "../assets/spinphony/spinphony-3.jpg",
+          "../assets/spinphony/spinphony-4.jpg",
+          "../assets/spinphony/spinphony-5.jpg",
+          "../assets/spinphony/spinphony-7.jpg",
+          "../assets/spinphony/spinphony-8.jpg"
+        ],
+        "process": {
+          "inspiration": [
+            "Pinball mechanics and Galton-board probability as level rhythm",
+            "Cooling system aesthetics of quantum computers for visual language",
+            "Embodied music interaction: turning rotation into movement"
+          ],
+          "development": [
+            "Prototyped record-style controller with rotary encoder and two buttons",
+            "Implemented Unity C# serial bridge for real-time input",
+            "Designed levels around tempo, momentum, and rotational inertia",
+            "Iterated on difficulty curve based on playtests"
+          ],
+          "images": [
+            "Conducted user testing sessions",
+            "Refined controller ergonomics and responsiveness",
+            "Polished game feel (acceleration, coyote time, audio cues)"
+          ]
+        }
+      }
+    },
+    {
       "title": "Chester Choiceworth",
-      "time": "2024",
       "thumbnail": "assets/chester/Chester Choiceworth.png",
       "intro": "\"You don't choose your lifestyle, Data does.\"",
       "tags": ["Physical Computing", "website"],
@@ -43,7 +125,6 @@
     },
     {
       "title": "Funguide",
-      "time": "2024",
       "thumbnail": "assets/funguide/Funguide.png",
       "intro": "A web app that uses AI to identify mushroom species from images and generates unique recipes. Built with Gemini API and React.",
       "tags": ["website"],
@@ -85,7 +166,6 @@
     },
     {
       "title": "An Apple",
-      "time": "2024",
       "thumbnail": "assets/apple/different perspective.png",
       "intro": "How can you see an apple from different perspectives?",
       "tags": ["website"],
@@ -125,7 +205,6 @@
     },
     {
       "title": "What to cook today?",
-      "time": "2024",
       "thumbnail": "assets/what_to_cook/wtc_hero_img.png",
       "intro": "A simple cookbook for kids",
       "tags": ["website"],
@@ -162,7 +241,6 @@
     },
     {
       "title": "What to drink today?",
-      "time": "2024",
       "thumbnail": "assets/what_to_drink/wtd1.png",
       "intro": "Decide what to drink though a digital chinese diviation",
       "tags": ["website"],
@@ -200,7 +278,6 @@
     },
     {
       "title": "Marriage Premium",
-      "time": "2024",
       "thumbnail": "../assets/marriage_premium/mp_tn.png",
       "intro": "Decide what to drink though a digital chinese diviation",
       "tags": ["p5.js", "Physical Computing"],
@@ -240,7 +317,6 @@
     },
     {
       "title": "Autobiographical Game",
-      "time": "2024",
       "thumbnail": "assets/bio_game/g1.png",
       "intro": "Decide what to drink though a digital chinese diviation",
       "tags": ["p5.js"],
